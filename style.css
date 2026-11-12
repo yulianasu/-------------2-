@@ -433,3 +433,104 @@
                 display: none;
             }
         }
+        @media (max-width: 600px) {
+    /* Отступы по краям экрана */
+    .container {
+        padding: 0 16px !important;
+    }
+
+    /* Шапка */
+    .header-content {
+        height: 70px !important;
+    }
+    .brand-logo {
+        font-size: 1.3rem !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* Главный экран */
+    .hero-architecture {
+        padding-top: 100px !important;
+        padding-bottom: 60px !important;
+        min-height: auto !important;
+    }
+    .hero-arch-title {
+        font-size: 2.2rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 20px !important;
+    }
+    .hero-arch-image {
+        height: 300px !important;
+        margin-top: 30px;
+    }
+
+    /* Галерея проектов */
+    .portfolio-gallery {
+        padding: 60px 0 !important;
+    }
+    .gallery-header h2 {
+        font-size: 2.2rem !important;
+    }
+    .gallery-grid, .gallery-grid.reverse {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 35px !important;
+    }
+    .project-img-box {
+        height: 280px !important;
+    }
+    .project-details {
+        padding: 20px 10px !important;
+    }
+    .project-details h3 {
+        font-size: 1.6rem !important;
+    }
+
+    /* Исправление Калькулятора  */
+    .calculator-section {
+        padding: 60px 0 !important;
+    }
+    .calc-container {
+        padding: 25px 18px !important; /* Убираем огромные поля */
+        border-radius: 8px;
+    }
+    .calc-title {
+        font-size: 1.8rem !important; /* Уменьшаем заголовок, чтобы не ломался */
+        margin-bottom: 25px !important;
+        line-height: 1.2 !important;
+    }
+    .calc-group label {
+        font-size: 0.75rem !important;
+    }
+    .calc-group select, 
+    .calc-group input {
+        font-size: 16px !important; /* Предотвращает нежелательный зум на iPhone */
+        padding: 12px !important;
+    }
+    /* Перестраиваем блок с ценой в столбик, чтобы не наезжало */
+    .calc-result {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        margin-top: 25px !important;
+        padding-top: 20px !important;
+    }
+    .calc-total {
+        font-size: 2.1rem !important;
+    }
+
+    /* Контакты */
+    .contacts-section {
+        padding: 60px 0 !important;
+    }
+    .contacts-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    .contacts-info h2 {
+        font-size: 2.2rem !important;
+    }
+    .contact-form-box {
+        padding: 20px 15px !important;
+    }
+}
