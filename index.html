@@ -1,0 +1,310 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÉRITABLE SPB // Архитектурное бюро & Дизайн интерьеров</title>
+    <!-- Стили и шрифты -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <!-- Шапка с полосой скролла -->
+    <header class="luxury-header">
+        <div class="scroll-progress" id="scrollBar"></div>
+        <div class="container header-content">
+            <a href="#" class="brand-logo">VÉRITABLE SPB<span>.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#projects">Проекты в СПб</a></li>
+                <li><a href="#calc">Калькулятор сметы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран -->
+        <section class="hero-architecture">
+            <div class="container hero-arch-grid">
+                <div>
+                    <span style="color: var(--accent); letter-spacing: 3px; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 20px;">Saint-Petersburg Architecture & Interior</span>
+                    <h1 class="hero-arch-title">Интерьеры с петербургским <i>характером</i></h1>
+                    <p class="hero-arch-lead">
+                        Проектирование элитных резиденций, апартаментов в исторических зданиях и загородных вилл в Санкт-Петербурге и Ленинградской области.
+                    </p>
+                    <a href="#projects" class="btn-luxury">Смотреть проекты</a>
+                </div>
+                <div class="hero-arch-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Luxury Interior SPB">
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея проектов СПб с подобранными фотографиями (Гостиная / Кабинет / Спальня) -->
+        <section class="portfolio-gallery" id="projects">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2>Избранные <br><i>реализации в СПб</i></h2>
+                    <p style="color: var(--text-muted); max-width: 350px;">Работа со сложной исторической архитектурой и современными премиальными пространствами.</p>
+                </div>
+
+                <!-- Проект 1: Резиденция Нева (Переключение: Гостиная / Спальня) -->
+                <div class="gallery-grid">
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj1Image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="Гостиная">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(1, 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80', this)">Гостиная</button>
+                                <button class="switch-btn" onclick="switchPhoto(1, 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80', this)">Спальня</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Крестовский остров</span>
+                        <h3>Резиденция «Нева»</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Просторные апартаменты с панорамным остеклением, элементы неоклассики и современные арт-объекты.</p>
+                    </div>
+                </div>
+
+                <!-- Проект 2: Особняк на Каменном (Переключение: Интерьер / Кабинет) -->
+                <div class="gallery-grid reverse">
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Исторический центр</span>
+                        <h3>Особняк на Каменном</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Деликатная реставрация интерьеров с интеграцией передовых инженерных систем «умный дом».</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj2Image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Интерьер">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(2, 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80', this)">Интерьер</button>
+                                <button class="switch-btn" onclick="switchPhoto(2, 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80', this)">Кабинет</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 3. Пентхаус у Эрмитажа -->
+                <div class="gallery-grid">
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj3Image" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="Столовая">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(3, 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80', this)">Столовая</button>
+                                <button class="switch-btn" onclick="switchPhoto(3, 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80', this)">Ванная</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Миллионная улица</span>
+                        <h3>Пентхаус у Эрмитажа</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Видовые апартаменты в тихом историческом переулке с террасой на крыше.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Вилла в Репино -->
+                <div class="gallery-grid reverse">
+                    <div class="project-details">
+                        <span>Ленинградская область • Репино</span>
+                        <h3>Вилла «Северный Бриз»</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Флагман загородного домостроения: второй свет и панорамный камин.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj4Image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Зал">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(4, 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', this)">Зал</button>
+                                <button class="switch-btn" onclick="switchPhoto(4, 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', this)">Терраса</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Лофт на Васильевском -->
+                <div class="gallery-grid">
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj5Image" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80" alt="Студия">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(5, 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80', this)">Студия</button>
+                                <button class="switch-btn" onclick="switchPhoto(5, 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=80', this)">Кухня</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Васильевский остров</span>
+                        <h3>Лофт в здании мануфактуры</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Брутальный кирпич, высокие потолки 4.5 метра и индустриальный дизайн.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Апартаменты у Таврического -->
+                <div class="gallery-grid reverse">
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Парадная улица</span>
+                        <h3>Резиденция «Таврический»</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Интерьер в сдержанных тонах с акцентами из латуни и мрамора.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj6Image" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Холл">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(6, 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80', this)">Холл</button>
+                                <button class="switch-btn" onclick="switchPhoto(6, 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80', this)">Детская</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Коттедж в Комарово -->
+                <div class="gallery-grid">
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj7Image" src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80" alt="Гостиная">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(7, 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80', this)">Гостиная</button>
+                                <button class="switch-btn" onclick="switchPhoto(7, 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80', this)">Спальня</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span>Ленинградская область • Комарово</span>
+                        <h3>Дом в сосновом бору</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Максимум естественного света, эко-материалы и единение с природой курортного района.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Дипломатический особняк -->
+                <div class="gallery-grid reverse">
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Фурштатская</span>
+                        <h3>Особняк дипломата</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Классический петербургский стиль, лепнина, паркет елочкой и антикварная мебель.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj8Image" src="https://images.unsplash.com/photo-1600210491891-2303f39a0669?auto=format&fit=crop&w=1200&q=80" alt="Зал">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(8, 'https://images.unsplash.com/photo-1600210491891-2303f39a0669?auto=format&fit=crop&w=1200&q=80', this)">Зал</button>
+                                <button class="switch-btn" onclick="switchPhoto(8, 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80', this)">Библиотека</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Апартаменты в ЖК «Премьер» -->
+                <div class="gallery-grid">
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj9Image" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="Кухня">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(9, 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80', this)">Кухня</button>
+                                <button class="switch-btn" onclick="switchPhoto(9, 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80', this)">Спальня</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span>Санкт-Петербург • Петровский остров</span>
+                        <h3>ЖК «Петровский Квартал»</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Современный минимализм, монохромная гамма и скрытые системы хранения.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Загородная усадьба в Павловске -->
+                <div class="gallery-grid reverse">
+                    <div class="project-details">
+                        <span>Ленинградская область • Павловск</span>
+                        <h3>Усадьба «Империал»</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">Величественная загородная резиденция с собственным зимним садом и бальный зал.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-img-box">
+                            <img id="proj10Image" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80" alt="Зимний сад">
+                            <div class="project-switch-btns">
+                                <button class="switch-btn active" onclick="switchPhoto(10, 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80', this)">Зимний сад</button>
+                                <button class="switch-btn" onclick="switchPhoto(10, 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', this)">Каминный зал</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерактивный калькулятор в рублях -->
+        <section class="calculator-section" id="calc">
+            <div class="container">
+                <div class="calc-container">
+                    <h2 class="calc-title">Калькулятор дизайн-<i>проекта</i></h2>
+                    
+                    <div class="calc-group">
+                        <label>Тип недвижимости в СПб и области</label>
+                        <select id="objectType">
+                            <option value="12000">Частный дом / Коттедж</option>
+                            <option value="15000">Апартаменты / Исторический фонд</option>
+                            <option value="10000">Квартира в новостройке</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label>Общая площадь (кв. м)</label>
+                        <input type="number" id="objectArea" value="120" min="40" max="1000">
+                    </div>
+
+                    <div class="calc-result">
+                        <div>
+                            <span style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Расчет стоимости разработки:</span>
+                        </div>
+                        <div class="calc-total" id="totalPrice">1,800,000 ₽</div>
+                    </div>
+                    <div class="calc-toast" id="calcToast">✓ Расчет обновлен с учетом актуальных расценок бюро в СПб</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ОТДЕЛЬНЫЙ БЛОК КОНТАКТОВ С СТРОКОЙ СВЯЗИ -->
+        <section class="contacts-section" id="contacts">
+            <div class="container contacts-grid">
+                <div class="contacts-info">
+                    <span style="color: var(--accent); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 15px;">Связь с бюро</span>
+                    <h2>Обсудить ваш <i>проект</i></h2>
+                    <p>Оставьте заявку, и наш ведущий архитектор свяжется с вами для согласования первичной консультации в Санкт-Петербурге.</p>
+                    
+                    <div class="contact-details-box">
+                        <div><span>📍</span> Невский проспект, 28, Санкт-Петербург</div>
+                        <div><span>📞</span> +7 (812) 445-88-99</div>
+                        <div><span>✉️</span> spb@veritable-design.ru</div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-box">
+                    <form onsubmit="event.preventDefault(); alert('Спасибо! Заявка успешно отправлена.');">
+                        <div class="form-row">
+                            <label>Ваше имя</label>
+                            <input type="text" required placeholder="Константин">
+                        </div>
+                        <div class="form-row">
+                            <label>Телефон / Telegram</label>
+                            <input type="text" required placeholder="+7 (...) или @username">
+                        </div>
+                        <div class="form-row">
+                            <label>Комментарий к проекту</label>
+                            <textarea rows="3" placeholder="Площадь объекта, пожелания..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-luxury" style="width: 100%; text-align: center;">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="container">
+            <p style="margin-bottom: 10px; color: #fff; font-size: 1.1rem;">VÉRITABLE ARCHITECTURAL BUREAU • САНКТ-ПЕТЕРБУРГ</p>
+            <p style="font-size: 0.75rem; color: #6b7280; margin-top: 10px;">Разработка концепции и фронтенд: Суворова Юлия</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
