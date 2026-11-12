@@ -433,104 +433,71 @@
                 display: none;
             }
         }
-        @media (max-width: 600px) {
-    /* Отступы по краям экрана */
+        @media screen and (max-width: 768px) {
+    /* Базовые отступы */
+    body {
+        overflow-x: hidden;
+    }
     .container {
-        padding: 0 16px !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
-    /* Шапка */
-    .header-content {
-        height: 70px !important;
-    }
-    .brand-logo {
-        font-size: 1.3rem !important;
-        letter-spacing: 2px !important;
-    }
-
-    /* Главный экран */
-    .hero-architecture {
-        padding-top: 100px !important;
-        padding-bottom: 60px !important;
-        min-height: auto !important;
-    }
-    .hero-arch-title {
-        font-size: 2.2rem !important;
-        line-height: 1.15 !important;
-        margin-bottom: 20px !important;
-    }
-    .hero-arch-image {
-        height: 300px !important;
-        margin-top: 30px;
-    }
-
-    /* Галерея проектов */
-    .portfolio-gallery {
-        padding: 60px 0 !important;
-    }
-    .gallery-header h2 {
-        font-size: 2.2rem !important;
-    }
-    .gallery-grid, .gallery-grid.reverse {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-        margin-bottom: 35px !important;
-    }
-    .project-img-box {
-        height: 280px !important;
-    }
-    .project-details {
-        padding: 20px 10px !important;
-    }
-    .project-details h3 {
-        font-size: 1.6rem !important;
-    }
-
-    /* Исправление Калькулятора  */
+    /* Калькулятор — убираем сжатие */
     .calculator-section {
-        padding: 60px 0 !important;
+        padding: 40px 0 !important;
     }
     .calc-container {
-        padding: 25px 18px !important; /* Убираем огромные поля */
-        border-radius: 8px;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
     }
     .calc-title {
-        font-size: 1.8rem !important; /* Уменьшаем заголовок, чтобы не ломался */
-        margin-bottom: 25px !important;
+        font-size: 1.6rem !important;
         line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+        word-break: normal !important;
+    }
+
+    /* Поля ввода */
+    .calc-group {
+        margin-bottom: 15px !important;
     }
     .calc-group label {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
+        white-space: normal !important;
     }
     .calc-group select, 
     .calc-group input {
-        font-size: 16px !important; /* Предотвращает нежелательный зум на iPhone */
-        padding: 12px !important;
-    }
-    /* Перестраиваем блок с ценой в столбик, чтобы не наезжало */
-    .calc-result {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 10px !important;
-        margin-top: 25px !important;
-        padding-top: 20px !important;
-    }
-    .calc-total {
-        font-size: 2.1rem !important;
+        width: 100% !important;
+        font-size: 15px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
     }
 
-    /* Контакты */
-    .contacts-section {
-        padding: 60px 0 !important;
+    /* Итоговая цена (исправление наезда букв) */
+    .calc-result {
+        display: block !important;
+        margin-top: 20px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid var(--border) !important;
+        text-align: left !important;
     }
-    .contacts-grid {
-        grid-template-columns: 1fr !important;
-        gap: 30px !important;
+    .calc-result div {
+        margin-bottom: 8px !important;
     }
-    .contacts-info h2 {
-        font-size: 2.2rem !important;
+    .calc-result span {
+        display: block !important;
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
     }
-    .contact-form-box {
-        padding: 20px 15px !important;
+    .calc-total {
+        display: block !important;
+        font-size: 1.8rem !important;
+        line-height: 1.1 !important;
+        white-space: nowrap !important;
+        margin-top: 5px !important;
     }
 }
